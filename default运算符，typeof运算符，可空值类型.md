@@ -34,4 +34,8 @@ Sun Mar 19 2023
       * `Nullable<int> a = null`
       * `？`后缀: `int? a = new int?() ` 
     * 允许将`null`对象或一个可空值类型对象转换为另一个可空值类型对象，但不允许从可空值类型对象转换到非可空值类型对象
-* 提升运算符
+  * 提升运算符
+    * 空合并运算符 `??` 
+      * `first ?? second` 先计算first表达式，若first不为null，则整个表达式结果等于first的计算结果
+      * 若first计算为null，则接着计算second，整个表达式的结果等于second的计算结果
+      * 需要注意的是如果first或second只要有一个为非空值类型，最终first ?? second返回的结果就是非空值类型
